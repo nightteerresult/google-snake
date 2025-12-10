@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -101,6 +102,7 @@
         }
     </script>
 </head>
+
 <body class="dark">
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
@@ -273,8 +275,49 @@
     </main>
 
     <section class="comments-section">
-        <h3>Comentários</h3>
-        <div id="disqus_thread" data-testid="comments-disqus"></div>
+        <div id="comments-wrapper" style="min-height:10px;"></div>
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {
+                var loaded = false;
+
+                function loadDisqus() {
+                    if (loaded) return;
+                    loaded = true;
+                    var d = document,
+                        s = d.createElement('script');
+                    s.src = 'https://doodlesnake.disqus.com/embed.js'; // <- replace YOUR-SHORTNAME
+                    s.setAttribute('data-timestamp', +new Date());
+                    s.async = true;
+                    (d.head || d.body).appendChild(s);
+                }
+
+                if ('IntersectionObserver' in window) {
+                    var io = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                loadDisqus();
+                                io.disconnect();
+                            }
+                        });
+                    }, {
+                        rootMargin: '300px'
+                    }); // start loading before it's in view
+                    io.observe(document.getElementById('comments-wrapper'));
+                } else {
+                    // Fallback for old browsers
+                    window.addEventListener('scroll', function onScroll() {
+                        var rect = document.getElementById('comments-wrapper').getBoundingClientRect();
+                        if (rect.top < (window.innerHeight + 300)) {
+                            window.removeEventListener('scroll', onScroll);
+                            loadDisqus();
+                        }
+                    });
+                }
+            })();
+        </script>
+
+
     </section>
 
     <footer>
@@ -294,4 +337,5 @@
 
     <script src="assets/app.js" defer></script>
 </body>
+
 </html>
