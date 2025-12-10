@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper.io 2 - Popular Snake Games</title>
+    <meta name="description" content="Paper.io 2 is an .io game where you have to capture as much territory as possible by painting it. Paint the map in your own color to take over the Paper.io world!">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://googlesnake.me/related-games/paper-io-2">
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paper.io 2 - Popular Snake Games">
+    <meta property="og:description" content="Paper.io 2 is an .io game where you have to capture as much territory as possible by painting it. Paint the map in your own color to take over the Paper.io world!">
+    <meta property="og:url" content="https://googlesnake.me/related-games/paper-io-2">
+    <meta property="og:image" content="https://googlesnake.me/related-games/assets/paper-io-2.avif">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Paper.io 2 - Popular Snake Games">
+    <meta name="twitter:description" content="Paper.io 2 is an .io game where you have to capture as much territory as possible by painting it. Paint the map in your own color to take over the Paper.io world!">
+    <meta name="twitter:image" content="https://googlesnake.me/related-games/assets/paper-io-2.avif">
+
+    <!-- Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="../assets/styles.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../assets/styles.css"></noscript>
+
+    <style>
+        .play-overlay-other-games::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('./assets/paper-io-2.avif');
+            background-size: cover;
+            background-position: center;
+            filter: blur(12px) brightness(.7);
+            transform: scale(1.05);
+            z-index: 0;
+        }
+    </style>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": "Paper.io 2 - Snake Game",
+            "description": "Paper.io 2 is an .io game where you have to capture as much territory as possible by painting it.",
+            "url": "https://googlesnake.me/related-games/paper-io-2",
+            "image": "https://googlesnake.me/related-games/assets/paper-io-2.avif",
+            "genre": ["Adventure", "Sports", "Puzzle"],
+            "gamePlatform": "Web Browser",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "6280",
+                "bestRating": "5",
+                "worstRating": "1"
+            }
+        }
+    </script>
+</head>
+
+<body class="dark">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <a href="/" class="logo" aria-label="DoodleGames Home">
+
+            <span>Google Snake Doodle</span>
+        </a>
+
+        <div class="header-right">
+
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" data-testid="button-theme-toggle">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+      </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <section class="game-hero">
+                <div class="iframe-container">
+                    <div class="play-overlay-other-games" id="playOverlay" data-testid="button-play-overlay">
+                        <button class="play-btn" id="playBtn" aria-label="Play Paper.io 2 Snake Game" data-testid="button-play">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Play Now
+            </button>
+                    </div>
+                    <iframe id="gameIframe" class="game-iframe" data-src="https://paperio.site/" title="Paper.io 2 Snake Game" allow="autoplay; fullscreen" loading="lazy" data-testid="iframe-game"></iframe>
+                </div>
+            </section>
+
+            <section class="game-info">
+                <h1 class="game-title" data-testid="text-game-title">Paper.io 2 Snake Game</h1>
+
+                <div class="game-meta">
+
+
+                    <div class="rating-container">
+                        <div class="stars" id="ratingStars" role="group" aria-label="Rate this game" data-testid="rating-stars">
+                            <button type="button" class="star-btn" data-rating="1" aria-label="Rate 1 star" data-testid="button-star-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </button>
+                            <button type="button" class="star-btn" data-rating="2" aria-label="Rate 2 stars" data-testid="button-star-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </button>
+                            <button type="button" class="star-btn" data-rating="3" aria-label="Rate 3 stars" data-testid="button-star-3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </button>
+                            <button type="button" class="star-btn" data-rating="4" aria-label="Rate 4 stars" data-testid="button-star-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </button>
+                            <button type="button" class="star-btn" data-rating="5" aria-label="Rate 5 stars" data-testid="button-star-5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </button>
+                        </div>
+                        <span class="rating-text" id="ratingText" data-testid="text-rating">4.9 (6280 votes)</span>
+                    </div>
+
+                    <div class="share-buttons">
+                        <button class="share-btn" data-share="facebook" aria-label="Share on Facebook" data-testid="button-share-facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </button>
+                        <button class="share-btn" data-share="twitter" aria-label="Share on X/Twitter" data-testid="button-share-twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </button>
+                        <button class="share-btn" data-share="whatsapp" aria-label="Share on WhatsApp" data-testid="button-share-whatsapp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </button>
+                        <button class="share-btn" data-share="telegram" aria-label="Share on Telegram" data-testid="button-share-telegram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+            </button>
+                        <button class="share-btn" data-share="copy" aria-label="Copy link" data-testid="button-share-copy">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+            </button>
+                    </div>
+                </div>
+
+                <div class="description">
+                    <p>Paper.io 2 is an .io game where you have to capture as much territory as possible by painting it. Paint the map in your own color to take over the Paper.io world!
+                    </p>
+                </div>
+                <div class="related-games">
+                    <h2 class="section-title">Related Games</h2>
+                    <div class="games-grid" data-testid="grid-related-games">
+                        <article class="game-card">
+                            <a href="/">
+                                <div class="game-card-thumb">
+                                    <img src="../assets/img/google-snake-game.webp" alt="Google Snake thumbnail" loading="lazy" data-testid="img-game-02">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-02">Google Snake</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="game-card">
+                            <a href="gulper-io">
+                                <div class="game-card-thumb">
+                                    <img src="assets/gulper-io-icon.png" alt="Gulper.io thumbnail" loading="lazy" data-testid="img-game-03">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-03">Gulper.io</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="game-card">
+                            <a href="worms-zone">
+                                <div class="game-card-thumb">
+                                    <img src="assets/worms-zone-icon.jfif" alt="Worms.Zone thumbnail" loading="lazy" data-testid="img-game-02">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-02">Worms.Zone</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="game-card">
+                            <a href="tileman-io">
+                                <div class="game-card-thumb">
+                                    <img src="assets/tileman-io-icon.jfif" alt="Tileman.io thumbnail" loading="lazy" data-testid="img-game-05">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-05">Tileman.io</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <div class="embed-section">
+                    <h3>Embed This Game</h3>
+                    <div class="embed-container">
+                        <textarea class="embed-textarea" rows="2" readonly id="embedCode" aria-label="Embed code" data-testid="textarea-embed">&lt;iframe src="https://googlesnake.me width="800" height="600" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</textarea>
+                        <button class="copy-btn" id="copyEmbed" aria-label="Copy embed code" data-testid="button-copy-embed">Copy</button>
+                    </div>
+                </div>
+
+
+                <section class="comments-section">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function() {
+                            this.page.url = "https://googlesnake.me/related-games/paper-io-2";
+                            this.page.identifier = "paper-io-2-snake";
+                        };
+
+                        (function() {
+                            var d = document,
+                                s = d.createElement('script');
+                            s.src = 'https://doodlesnake.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+
+
+                <section class="more-games-section">
+                    <h2 class="section-title">More Doodle Games</h2>
+                    <div class="games-grid" data-testid="grid-more-games">
+                        <article class="game-card">
+                            <a href="https://www.doodlegames.site/google-doodle-basketball-2012">
+                                <div class="game-card-thumb">
+                                    <img src="https://doodleimg.doodlegames.site/Doodle%20Basketball%202012%20Doodle%20-%20Google%20Doodles.png" alt="Doodle Basketball 2012 thumbnail" loading="lazy" data-testid="img-game-06">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-06">Doodle Basketball 2012</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="game-card">
+                            <a href="https://www.doodlegames.site/doodle-baseball-game-play-popular-doodle-games">
+                                <div class="game-card-thumb">
+                                    <img src="https://doodleimg.doodlegames.site/Google-Doodle-Baseball-icon.png" alt="Doodle Baseball Game thumbnail" loading="lazy" data-testid="img-game-07">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-07">⚾ Doodle Baseball Game</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="game-card">
+                            <a href="https://www.doodlegames.site/google-block-breaker-play-doodle-games">
+                                <div class="game-card-thumb">
+                                    <img src="https://doodleimg.doodlegames.site/google-block-breaker-play-doodle-games.jpg" alt="Google Block Breaker Doodle thumbnail" loading="lazy" data-testid="img-game-08">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-08">Google Block Breaker</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="game-card">
+                            <a href="https://www.doodlegames.site/doodle-jump-popular-doodle-games">
+                                <div class="game-card-thumb">
+                                    <img src="https://doodleimg.doodlegames.site/Doodle_Jump.png" alt="Doodle Jump thumbnail" loading="lazy" data-testid="img-game-09">
+                                </div>
+                                <div class="game-card-content">
+                                    <h3 class="game-card-title" data-testid="text-card-title-09">Doodle Jump</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Google Snake Doodle</h4>
+                <p>Googlesnake.me is a platform where you can play offical snake game from google and other popular snake games without any need of signup or download</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="/privacy" data-testid="link-footer-privacy">Privacy Policy</a></p>
+                <p><a href="/cookies" data-testid="link-footer-cookies">Cookie Policy</a></p>
+                <p><a href="/about" data-testid="link-footer-about">About Us</a></p>
+                <p><a href="/contact" data-testid="link-footer-contact">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Language</h4>
+                <p>Play Snake Game in Other Language:</p>
+                <a href="/index-pt" class="footer-lang" data-testid="link-footer-lang-pt">
+                    <span>Portugu&ecirc;s</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Googlesnake.me. All rights reserved. Games are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/app.js" defer></script>
+</body>
+
+</html>

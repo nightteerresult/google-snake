@@ -1,0 +1,6 @@
+# robots.txt for DoodleGames
+
+User-agent: *
+Allow: /
+Sitemap: https://googlesnake.me/sitemap.xml
+Disallow: /doodle-snake.html
