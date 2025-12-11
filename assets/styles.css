@@ -320,7 +320,8 @@ main {
 
 .game-info {
     max-width: 1000px;
-    margin: 0 auto
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .list-margin {
