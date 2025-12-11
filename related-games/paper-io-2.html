@@ -27,7 +27,9 @@
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"></noscript>
     <link rel="preload" as="style" href="../assets/styles.css" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../assets/styles.css"></noscript>
 
@@ -112,7 +114,7 @@
                 </div>
             </section>
 
-            <section class="game-info">
+            <div class="game-info">
                 <h1 class="game-title" data-testid="text-game-title">Paper.io 2 Snake Game</h1>
 
                 <div class="game-meta">
@@ -289,7 +291,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/google-doodle-basketball-2012">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/Doodle%20Basketball%202012%20Doodle%20-%20Google%20Doodles.png" alt="Doodle Basketball 2012 thumbnail" loading="lazy" data-testid="img-game-06">
+                                    <img src="https://doodleimg.doodlegames.site/Doodle%20Basketball%202012%20Doodle%20-%20Google%20Doodles.png" alt="Doodle Basketball 2012 thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-06">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-06">Doodle Basketball 2012</h3>
@@ -299,7 +301,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/doodle-baseball-game-play-popular-doodle-games">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/Google-Doodle-Baseball-icon.png" alt="Doodle Baseball Game thumbnail" loading="lazy" data-testid="img-game-07">
+                                    <img src="https://doodleimg.doodlegames.site/Google-Doodle-Baseball-icon.png" alt="Doodle Baseball Game thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-07">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-07">⚾ Doodle Baseball Game</h3>
@@ -309,7 +311,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/google-block-breaker-play-doodle-games">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/google-block-breaker-play-doodle-games.jpg" alt="Google Block Breaker Doodle thumbnail" loading="lazy" data-testid="img-game-08">
+                                    <img src="https://doodleimg.doodlegames.site/google-block-breaker-play-doodle-games.jpg" alt="Google Block Breaker Doodle thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-08">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-08">Google Block Breaker</h3>
@@ -319,7 +321,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/doodle-jump-popular-doodle-games">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/Doodle_Jump.png" alt="Doodle Jump thumbnail" loading="lazy" data-testid="img-game-09">
+                                    <img src="https://doodleimg.doodlegames.site/Doodle_Jump.png" alt="Doodle Jump thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-09">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-09">Doodle Jump</h3>
@@ -328,7 +330,7 @@
                         </article>
                     </div>
                 </section>
-            </section>
+            </div>
         </div>
     </main>
 

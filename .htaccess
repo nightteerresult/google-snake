@@ -12,6 +12,30 @@ RewriteRule ^(.+)$ $1.html [L]
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+
+  ExpiresByType text/html "access plus 5 minutes"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(png|jpg|jpeg|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+  <FilesMatch "\.(woff2|woff|ttf|otf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
 </IfModule>

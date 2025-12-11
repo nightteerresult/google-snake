@@ -35,7 +35,8 @@
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"></noscript>
     <link rel="preload" as="style" href="assets/styles.css" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/styles.css"></noscript>
 
@@ -110,7 +111,7 @@
 
     <header class="header">
         <a href="/" class="logo" aria-label="GoogleSnakeDoodle Home">
-            <img src="assets/img/logo.png" alt="GoogleSnakeDoodle Logo" width="32" height="32">
+            <img src="assets/img/logo.png" alt="GoogleSnakeDoodle Logo" width="32" height="32" decoding="async">
             <span>Google Snake Doodle</span>
         </a>
 
@@ -148,9 +149,9 @@
                     <a id="fullscreenBtn" class="fullscreen-btn" href="#" target="_blank" rel="noopener noreferrer">Play Full Screen</a>
                     <iframe id="gameIframe" class="game-iframe" data-src="doodle-snake.html" title="Google Snake Doodle Game" allow="autoplay; fullscreen" loading="lazy" data-testid="iframe-game"></iframe>
                 </div>
-            </section>
+            </div>
 
-            <section class="game-info">
+            <div class="game-info">
                 <h1 class="game-title" data-testid="text-game-title">Google Snake Doodle Game</h1>
 
                 <div class="game-meta">
@@ -284,7 +285,7 @@
                     <p>Google Snake is a modern browser-based version of the classic arcade game "Snake." Originally popular from Nokia mobile phones in 1998, the concept is simple: guide a snake to eat food while avoiding walls and its own tail.</p>
                     <p>Google introduced its version as a "Google Doodle" to celebrate the Lunar New Year in 2013. Since then, it has become a staple search Easter egg. By simply searching visiting https://googlesnake.me in your browser, you can launch the
                         game instantly. And start enjoying this amazing game with updated graphics, smoother mechanics, and colorful customization options.</p>
-                    <img src="./assets/img/google-snake-game.webp" alt="Google Snake Doodle Game" width="100%" style="margin:15px 0px;">
+                    <img src="./assets/img/google-snake-game.webp" alt="Google Snake Doodle Game" width="100%" style="margin:15px 0px;" loading="lazy" decoding="async">
                     <h2>How to Play Google Snake: A Step-by-Step Guide</h2>
                     <h3>Doodle Snake Game Controls</h3>
                     <ul class="list-margin">
@@ -422,7 +423,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/google-doodle-basketball-2012">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/Doodle%20Basketball%202012%20Doodle%20-%20Google%20Doodles.png" alt="Doodle Basketball 2012 thumbnail" loading="lazy" data-testid="img-game-06">
+                                    <img src="https://doodleimg.doodlegames.site/Doodle%20Basketball%202012%20Doodle%20-%20Google%20Doodles.png" alt="Doodle Basketball 2012 thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-06">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-06">Doodle Basketball 2012</h3>
@@ -432,7 +433,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/doodle-baseball-game-play-popular-doodle-games">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/Google-Doodle-Baseball-icon.png" alt="Doodle Baseball Game thumbnail" loading="lazy" data-testid="img-game-07">
+                                    <img src="https://doodleimg.doodlegames.site/Google-Doodle-Baseball-icon.png" alt="Doodle Baseball Game thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-07">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-07">⚾ Doodle Baseball Game</h3>
@@ -442,7 +443,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/google-block-breaker-play-doodle-games">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/google-block-breaker-play-doodle-games.jpg" alt="Google Block Breaker Doodle thumbnail" loading="lazy" data-testid="img-game-08">
+                                    <img src="https://doodleimg.doodlegames.site/google-block-breaker-play-doodle-games.jpg" alt="Google Block Breaker Doodle thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-08">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-08">Google Block Breaker</h3>
@@ -452,7 +453,7 @@
                         <article class="game-card">
                             <a href="https://www.doodlegames.site/doodle-jump-popular-doodle-games">
                                 <div class="game-card-thumb">
-                                    <img src="https://doodleimg.doodlegames.site/Doodle_Jump.png" alt="Doodle Jump thumbnail" loading="lazy" data-testid="img-game-09">
+                                    <img src="https://doodleimg.doodlegames.site/Doodle_Jump.png" alt="Doodle Jump thumbnail" loading="lazy" decoding="async" fetchpriority="low" data-testid="img-game-09">
                                 </div>
                                 <div class="game-card-content">
                                     <h3 class="game-card-title" data-testid="text-card-title-09">Doodle Jump</h3>

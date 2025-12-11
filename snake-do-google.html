@@ -34,7 +34,9 @@
     <!-- Preconnect & Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"></noscript>
     <link rel="preload" as="style" href="assets/styles.css" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/styles.css"></noscript>
 
@@ -108,7 +110,7 @@
 
     <header class="header">
         <a href="/" class="logo" aria-label="GoogleSnakeDoodle Home">
-            <img src="assets/img/logo.png" alt="GoogleSnakeDoodle Logo" width="32" height="32">
+            <img src="assets/img/logo.png" alt="GoogleSnakeDoodle Logo" width="32" height="32" decoding="async">
             <span>Google Snake Doodle</span>
         </a>
 
@@ -146,7 +148,7 @@
                 </div>
             </section>
 
-            <section class="game-info">
+            <div class="game-info">
                 <h1 class="game-title" data-testid="text-game-title">Jogo Google Snake Doodle</h1>
 
                 <div class="game-meta">
@@ -271,7 +273,7 @@
                         </a>
                     </article>
                 </div>
-            </section>
+            </div>
         </div>
     </main>
 

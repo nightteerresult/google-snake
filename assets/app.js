@@ -300,6 +300,50 @@
     };
 
 
+    const DisqusManager = {
+        loaded: false,
+        init() {
+            const wrapper = document.getElementById('comments-wrapper');
+            const thread = document.getElementById('disqus_thread');
+            if (!wrapper || !thread) return;
+            const load = () => {
+                if (this.loaded) return;
+                this.loaded = true;
+                const d = document;
+                const s = d.createElement('script');
+                s.src = 'https://doodlesnake.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                s.async = true;
+                (d.head || d.body).appendChild(s);
+            };
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            load();
+                            io.disconnect();
+                        }
+                    });
+                }, { rootMargin: '300px' });
+                io.observe(wrapper);
+            } else {
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const rect = wrapper.getBoundingClientRect();
+                        if (rect.top < (window.innerHeight + 300)) {
+                            window.removeEventListener('scroll', onScroll);
+                            load();
+                        }
+                        ticking = false;
+                    });
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+            }
+        }
+    };
 
     // Initialize all modules on DOM ready
     document.addEventListener('DOMContentLoaded', () => {
