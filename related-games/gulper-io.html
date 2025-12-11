@@ -28,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="./assets/gulper-io.avif" fetchpriority="high">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap"></noscript>
     <link rel="preload" as="style" href="../assets/styles.css" onload="this.rel='stylesheet'">
@@ -242,45 +243,7 @@
                 <section class="comments-section">
                     <div id="comments-wrapper" style="min-height:10px;"></div>
                     <div id="disqus_thread"></div>
-                    <script>
-                        (function() {
-                            var loaded = false;
-
-                            function loadDisqus() {
-                                if (loaded) return;
-                                loaded = true;
-                                var d = document,
-                                    s = d.createElement('script');
-                                s.src = 'https://doodlesnake.disqus.com/embed.js'; // <- replace YOUR-SHORTNAME
-                                s.setAttribute('data-timestamp', +new Date());
-                                s.async = true;
-                                (d.head || d.body).appendChild(s);
-                            }
-
-                            if ('IntersectionObserver' in window) {
-                                var io = new IntersectionObserver(function(entries) {
-                                    entries.forEach(function(entry) {
-                                        if (entry.isIntersecting) {
-                                            loadDisqus();
-                                            io.disconnect();
-                                        }
-                                    });
-                                }, {
-                                    rootMargin: '300px'
-                                }); // start loading before it's in view
-                                io.observe(document.getElementById('comments-wrapper'));
-                            } else {
-                                // Fallback for old browsers
-                                window.addEventListener('scroll', function onScroll() {
-                                    var rect = document.getElementById('comments-wrapper').getBoundingClientRect();
-                                    if (rect.top < (window.innerHeight + 300)) {
-                                        window.removeEventListener('scroll', onScroll);
-                                        loadDisqus();
-                                    }
-                                });
-                            }
-                        })();
-                    </script>
+                    
 
 
                 </section>

@@ -110,7 +110,7 @@
 
     <header class="header">
         <a href="/" class="logo" aria-label="GoogleSnakeDoodle Home">
-            <img src="assets/img/logo.png" alt="GoogleSnakeDoodle Logo" width="32" height="32" decoding="async">
+            <img src="assets/img/logo.png" alt="GoogleSnakeDoodle Logo" width="32" height="32" decoding="async" fetchpriority="high">
             <span>Google Snake Doodle</span>
         </a>
 
@@ -280,45 +280,7 @@
     <section class="comments-section">
         <div id="comments-wrapper" style="min-height:10px;"></div>
         <div id="disqus_thread"></div>
-        <script>
-            (function() {
-                var loaded = false;
-
-                function loadDisqus() {
-                    if (loaded) return;
-                    loaded = true;
-                    var d = document,
-                        s = d.createElement('script');
-                    s.src = 'https://doodlesnake.disqus.com/embed.js'; // <- replace YOUR-SHORTNAME
-                    s.setAttribute('data-timestamp', +new Date());
-                    s.async = true;
-                    (d.head || d.body).appendChild(s);
-                }
-
-                if ('IntersectionObserver' in window) {
-                    var io = new IntersectionObserver(function(entries) {
-                        entries.forEach(function(entry) {
-                            if (entry.isIntersecting) {
-                                loadDisqus();
-                                io.disconnect();
-                            }
-                        });
-                    }, {
-                        rootMargin: '300px'
-                    }); // start loading before it's in view
-                    io.observe(document.getElementById('comments-wrapper'));
-                } else {
-                    // Fallback for old browsers
-                    window.addEventListener('scroll', function onScroll() {
-                        var rect = document.getElementById('comments-wrapper').getBoundingClientRect();
-                        if (rect.top < (window.innerHeight + 300)) {
-                            window.removeEventListener('scroll', onScroll);
-                            loadDisqus();
-                        }
-                    });
-                }
-            })();
-        </script>
+        
 
 
     </section>
